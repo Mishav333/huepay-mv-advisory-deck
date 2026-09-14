@@ -49,12 +49,18 @@
   .card h3{margin:0 0 6px; font-size:1.3rem;}
   .card p{margin:0; color:#5a6390; font-size:1rem;}
   .platform-pill{display:inline-block; font-size:.85rem; font-weight:700; padding:4px 14px; border-radius:999px; background:var(--lilac); color:var(--navy); margin-bottom:14px;}
-  .video-row{display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:24px; max-width:1000px;}
-  .video-card{background:var(--paper); border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 24px rgba(31,44,92,.1);}
-  .video-card video{width:100%; display:block; background:#000;}
-  .video-caption{padding:16px 20px;}
-  .video-caption .tag{font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:#8188b0;}
-  .video-caption h4{margin:6px 0 0; font-size:1.05rem;}
+  .video-row{display:grid; grid-template-columns:repeat(6,1fr); gap:18px; margin-top:24px; max-width:1180px;}
+  .video-card{background:var(--paper); border-radius:14px; overflow:hidden; box-shadow:0 6px 24px rgba(31,44,92,.1);}
+  .video-card video{width:100%; display:block; background:#000; aspect-ratio:9/16; object-fit:cover;}
+  .video-caption{padding:10px 12px;}
+  .video-caption .tag{font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em; color:#8188b0;}
+  .video-caption h4{margin:4px 0 0; font-size:.82rem; line-height:1.2;}
+  @media (max-width:900px){
+    .video-row{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:560px){
+    .video-row{grid-template-columns:repeat(2,1fr);}
+  }
   .note{font-size:.95rem; color:#7680a8; margin-top:26px; max-width:900px;}
   .stat-row{display:flex; gap:60px; margin-top:30px; flex-wrap:wrap;}
   .stat{min-width:220px;}
@@ -86,7 +92,6 @@
   @media (max-width:820px){
     .slide{padding:56px 24px;}
     .grid3{grid-template-columns:1fr;}
-    .video-row{grid-template-columns:1fr;}
     .partner-grid{grid-template-columns:1fr;}
     .en{font-size:1.9rem;}
     .logo-topright{position:static; margin-bottom:24px;}
@@ -132,21 +137,57 @@
 
   <div class="video-row">
     <div class="video-card">
-      <video controls preload="metadata" muted playsinline poster="">
-        <source src="assets/example-restaurant.mp4" type="video/mp4">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-1-burgerroad.mp4" type="video/mp4">
       </video>
       <div class="video-caption">
-        <span class="tag">Restaurant example</span>
-        <h4>Kebabs on Bell</h4>
+        <span class="tag">Restaurant</span>
+        <h4>Burger Road</h4>
       </div>
     </div>
     <div class="video-card">
-      <video controls preload="metadata" muted playsinline poster="">
-        <source src="assets/example-nonrestaurant.mp4" type="video/mp4">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-2-stix.mp4" type="video/mp4">
       </video>
       <div class="video-caption">
-        <span class="tag">Salon &amp; real estate example</span>
-        <h4>Valet Vault &amp; RayWhite Werribee</h4>
+        <span class="tag">Dessert &amp; drinks</span>
+        <h4>STIX</h4>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-3-miscparramatta.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span class="tag">Hospitality</span>
+        <h4>MISC. Parramatta</h4>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-4-feedwell.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span class="tag">Food &amp; beverage</span>
+        <h4>Feedwell</h4>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-5-justswitch.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span class="tag">Services</span>
+        <h4>Just Switch</h4>
+      </div>
+    </div>
+    <div class="video-card">
+      <video controls preload="metadata" muted playsinline>
+        <source src="assets/example-6-flightrisk.mp4" type="video/mp4">
+      </video>
+      <div class="video-caption">
+        <span class="tag">Retail</span>
+        <h4>Flight Risk</h4>
       </div>
     </div>
   </div>
